@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        bounce: 'bounce 2s infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 transition-colors duration-200">
+
+    <button id="theme-toggle" class="fixed top-4 right-4 p-2 rounded-full bg-slate-200 dark:bg-slate-700 shadow-lg z-50 w-11">
+        <i class="fas fa-sun dark:hidden text-yellow-500 text-xl"></i>
+        <i class="fas fa-moon hidden dark:block text-blue-300 text-xl"></i>
+    </button>
+
+    <main class="container mx-auto px-4">
+        <section class="min-h-screen flex flex-col justify-center items-center px-4">
+            <div class="container max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+                <div class="w-48 h-48 rounded-full overflow-hidden ring-4 ring-blue-500 dark:ring-blue-400">
+                    <img id="github-avatar" src="https://avatars.githubusercontent.com/u/146143459?v=4" alt="Sua foto" class="w-full h-full object-cover"/>
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h1 class="text-4xl font-bold text-slate-800 dark:text-white mb-4">Filipe Queiroz</h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-300">
+                        Desenvolvedor Front-End com experiência em Vue.js, React, Tailwind CSS e Bootstrap. Tenho foco em criar interfaces funcionais e modernas, além de valorizar a colaboração e a melhoria contínua das minhas soft skills para entregar resultados eficientes e inovadores.
+                    </p>
+                </div>
+            </div>
+            
+            <div id="scroll-indicator" class="absolute bottom-8">
+                <i class="fas fa-chevron-down text-3xl text-slate-600 dark:text-slate-300"></i>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">Tecnologias</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+                    <i class="fab fa-html5 text-6xl text-orange-500 mb-4"></i>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">HTML</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+                    <i class="fab fa-css3-alt text-6xl text-blue-500 mb-4"></i>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">CSS</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+                    <i class="fab fa-js text-6xl text-yellow-400 mb-4"></i>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">JavaScript</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+                    <i class="fab fa-react text-6xl text-blue-400 mb-4"></i>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">React</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+                    <i class="fab fa-vuejs text-6xl text-green-500 mb-4"></i>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">Vue</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+                    <i class="fab fa-bootstrap text-6xl text-purple-500 mb-4"></i>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">Bootstrap</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+                    <i class="fas fa-wind text-6xl text-cyan-500 mb-4"></i>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">Tailwind</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section class="mb-5">
+            <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">Projetos</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Projeto 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-sm">
+                    <img 
+                        src="https://image.thum.io/get/width/800/crop/600/https://teste-frontend-jr-opovo.vercel.app/" 
+                        alt="Preview do projeto"
+                        class="w-full h-96 object-cover hover:scale-105 transition-transform"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Desafio Front-End.Jr</h3>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4">Projeto de desenvolvimento pessoal no qual consumi a API do TMDB para criar uma aplicação responsiva e dinâmica. O código se atualiza automaticamente com os dados da API, garantindo informações precisas e atualizadas. As tecnologias utilizadas incluem React, Bootstrap e JavaScript, permitindo um design moderno e uma experiência de usuário fluida.</p>
+                        <div class="flex gap-4">
+                            <a href="https://teste-frontend-jr-opovo.vercel.app/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="https://github.com/FilipeAraujoQ/teste-frontendJr-OPOVO" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-sm ">
+                    <img 
+                        src="https://image.thum.io/get/width/800/crop/600/https://desafio-back-end-rho.vercel.app/" 
+                        alt="Preview do projeto"
+                        class="w-full h-96 object-cover hover:scale-105 transition-transform"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Desafio Back-End Express</h3>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4">Projeto de desenvolvimento pessoal onde criei uma API para gerenciamento de livros. A API permite adicionar, editar, excluir e listar livros, além de marcar se um livro foi lido ou não. Essa solução foi projetada para facilitar o acompanhamento de leituras, proporcionando flexibilidade e praticidade na organização de livros lidos e não lidos.</p>
+                        <div class="flex gap-4">
+                            <a href="https://desafio-back-end-rho.vercel.app/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="https://github.com/FilipeAraujoQ/desafio-back-end" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
