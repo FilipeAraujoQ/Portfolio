@@ -4,13 +4,11 @@ themeToggle.addEventListener('click', () => {
     saveThemePreference();
 });
 
-// Save theme preference
 function saveThemePreference() {
     const isDark = document.documentElement.classList.contains('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
-// Load saved theme
 function loadThemePreference() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -20,7 +18,6 @@ function loadThemePreference() {
     }
 }
 
-// Scroll indicator handling
 const scrollIndicator = document.getElementById('scroll-indicator');
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
@@ -32,5 +29,4 @@ window.addEventListener('scroll', () => {
     scrollIndicator.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
 });
 
-// Initialize theme on load
 document.addEventListener('DOMContentLoaded', loadThemePreference);
